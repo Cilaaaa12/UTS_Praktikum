@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkringan Jawara - Buku Tamu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="syakila_header">
+        <h1>Angkringan Jawara</h1>
+    </header>
+
+    <nav id="syakila_navbar">
+        <ul class="syakila_nav_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="lokasi.html">Lokasi</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="promo.html">Promo</a></li>
+            <li><a href="bukutamu.html" class="active">Buku Tamu</a></li>
+        </ul>
+    </nav>
+
+    <div class="syakila_container">
+        <section class="syakila_content_section">
+            <h2>Buku Tamu / Hubungi Kami</h2>
+            <p>Ada kritik, saran, atau pesan untuk kami? Silakan isi form di bawah ini. Masukan Anda sangat berarti bagi kami untuk menjadi lebih baik.</p>
+            
+            <form id="syakila_guestBookForm" action="#" method="POST">
+                <div class="syakila_form_group">
+                    <label for="syakila_nama">Nama Anda:</label>
+                    <input type="text" id="syakila_nama" name="nama" required>
+                </div>
+                <div class="syakila_form_group">
+                    <label for="syakila_email">Email Anda:</label>
+                    <input type="email" id="syakila_email" name="email" required>
+                </div>
+                <div class="syakila_form_group">
+                    <label for="syakila_pesan">Pesan Anda:</label>
+                    <textarea id="syakila_pesan" name="pesan" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="syakila_form_button">Kirim Pesan</button>
+            </form>
+        </section>
+    </div>
+
+    <footer id="syakila_footer">
+        <p>Copyright © 2025 - Angkringan Jawara by Syakila. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://www.instagram.com/angkringan.jawara?igsh=dDJhMGk2djZxaXBh" target="_blank" id="syakila_instagram_fixed" title="Kunjungi Instagram Kami">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#top" id="syakila_scroll_top" title="Kembali ke Atas">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,374 @@
+/* css/style.css (Versi Final - Palet "Zodiac" + Info List) */
+
+/* --- Keyframes untuk Animasi --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpFade {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+/* --- Global & Typography --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9F9; 
+    color: #333;
+    padding-bottom: 80px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #13264D; 
+}
+
+a {
+    text-decoration: none;
+    color: #56B4BE;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #13264D;
+}
+
+/* --- Main Layout --- */
+.syakila_container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* --- Header & Navigation --- */
+#syakila_header {
+    background: #13264D; 
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #56B4BE;
+    text-align: center;
+}
+
+#syakila_header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+#syakila_navbar {
+    background: #86949F; 
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.syakila_nav_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.syakila_nav_menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.syakila_nav_menu li a {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.syakila_nav_menu li a:hover,
+.syakila_nav_menu li a.active {
+    color: #F8F9F9;
+    border-bottom: 2px solid #F8F9F9;
+}
+
+/* --- Hero Section (Homepage) --- */
+.syakila_hero {
+    min-height: 400px;
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+.syakila_hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.syakila_hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    animation: slideUpFade 1s ease-out;
+}
+
+.syakila_cta_button {
+    background: #56B4BE;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.syakila_cta_button:hover {
+    background: #13264D;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Content Section --- */
+.syakila_content_section {
+    background: #fff;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: slideUpFade 1s ease-out;
+}
+
+/* --- Form (Buku Tamu) --- */
+.syakila_form_group {
+    margin-bottom: 20px;
+}
+
+.syakila_form_group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #13264D;
+}
+
+.syakila_form_group input[type="text"],
+.syakila_form_group input[type="email"],
+.syakila_form_group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.syakila_form_button {
+    background: #56B4BE;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.syakila_form_button:hover {
+    background: #13264D;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Gallery Page --- */
+.syakila_gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.syakila_gallery_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.syakila_gallery_item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+
+/* --- Location Page --- */
+.syakila_map_responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    border-radius: 8px;
+    margin-top: 25px; /* Memberi jarak dari daftar info di atasnya */
+}
+
+.syakila_map_responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+/* --- Footer --- */
+#syakila_footer {
+    background: #13264D;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* --- KODE BARU UNTUK DAFTAR INFO LOKASI --- */
+.syakila_info_list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px; /* Jarak dari paragraf di atas */
+    border-top: 1px solid #eee; /* Garis pemisah tipis */
+    padding-top: 25px; /* Jarak setelah garis pemisah */
+}
+
+.syakila_info_list li {
+    display: flex; /* Membuat ikon dan teks sejajar */
+    align-items: flex-start; /* Sejajar dari atas */
+    margin-bottom: 18px; /* Jarak antar item */
+    font-size: 1rem; /* Ukuran font normal */
+    line-height: 1.6;
+}
+
+.syakila_info_list li i {
+    /* Styling Ikon (Font Awesome) */
+    width: 35px; /* Memberi ruang tetap untuk ikon */
+    font-size: 1.2rem;
+    color: #13264D; /* Warna Blue Zodiac (Primer) */
+    margin-top: 5px; /* Menyesuaikan posisi ikon agar pas */
+    text-align: center; /* Ikon di tengah */
+}
+
+.syakila_info_list li strong {
+    color: #13264D; /* Warna Blue Zodiac (Primer) */
+    display: block; /* Judul (Alamat, Telepon) jadi 1 baris sendiri */
+    margin-bottom: 2px;
+}
+/* --- AKHIR DARI KODE BARU --- */
+
+
+/* --- Fixed Buttons (IG & Scroll) --- */
+#syakila_instagram_fixed,
+#syakila_scroll_top {
+    position: fixed;
+    right: 20px;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#syakila_instagram_fixed:hover,
+#syakila_scroll_top:hover {
+    transform: scale(1.1);
+}
+
+#syakila_instagram_fixed {
+    bottom: 80px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+#syakila_scroll_top {
+    bottom: 20px;
+    background-color: #333;
+    display: none;
+}
+
+/* --- Responsive --- */
+@media(max-width: 768px) {
+    #syakila_header h1 {
+        font-size: 1.8rem;
+    }
+
+    .syakila_nav_menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .syakila_hero h2 {
+        font-size: 2rem;
+    }
+
+    .syakila_hero {
+        background-attachment: scroll;
+    }
+
+    .syakila_container {
+        width: 95%;
+    }
+
+    #syakila_instagram_fixed,
+    #syakila_scroll_top {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        right: 15px;
+    }
+
+    #syakila_instagram_fixed {
+        bottom: 70px;
+    }
+    #syakila_scroll_top {
+        bottom: 15px;
+    }
+}
